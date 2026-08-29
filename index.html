@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Política de privacidad de RBX Overwatch.">
+  <title>Política de privacidad — RBX Overwatch</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1118;
+      --card: #111c28;
+      --card-2: #0d151f;
+      --text: #f6f8fb;
+      --muted: #a4b0bf;
+      --body: #d9e1ea;
+      --line: #26394a;
+      --blue: #25b9ff;
+      --green: #2ce39a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 32px 16px 56px;
+      background: radial-gradient(circle at 85% 0%, #12334a 0, var(--bg) 34rem), var(--bg);
+      color: var(--body);
+      font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 34px 40px 42px;
+      background: color-mix(in srgb, var(--card) 94%, transparent);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 20px 70px rgb(0 0 0 / 28%);
+    }
+    .eyebrow { margin: 0 0 10px; color: var(--blue); font-weight: 700; letter-spacing: .04em; }
+    h1 { margin: 0; color: var(--text); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; }
+    h2 { margin: 34px 0 10px; color: var(--text); font-size: 1.35rem; line-height: 1.25; }
+    p, li { max-width: 78ch; }
+    li { margin: 7px 0; }
+    .meta { color: var(--muted); font-size: .9rem; }
+    a { color: var(--blue); }
+    code { padding: .1em .35em; background: var(--card-2); border-radius: 5px; color: #bdeaff; }
+    .notice { margin: 24px 0 28px; padding: 14px 16px; border-left: 3px solid var(--green); background: #123d37; border-radius: 8px; }
+    @media (max-width: 620px) {
+      body { padding: 12px 8px 28px; }
+      main { padding: 24px 20px 30px; border-radius: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">RBX Overwatch</p>
+    <h1>Política de privacidad</h1>
+    <p class="meta">Última actualización: 29 de agosto de 2026</p>
+
+    <div class="notice">Esta política explica qué datos maneja RBX Overwatch, para qué los utiliza y qué controles tiene el usuario.</div>
+
+    <h2>Qué hace la extensión</h2>
+    <p>RBX Overwatch permite que el usuario registre localmente cambios públicos de los perfiles de Roblox que agrega manualmente. La extensión no accede a información privada, no modifica Roblox y no intenta eludir las opciones de privacidad o los límites del servicio.</p>
+    <p>RBX Overwatch no está afiliada, patrocinada ni respaldada por Roblox Corporation.</p>
+
+    <h2>Datos que maneja</h2>
+    <ul>
+      <li>Nombre de usuario, nombre visible e ID de Roblox que el usuario introduce o selecciona.</li>
+      <li>Estado devuelto por Roblox: desconectado, en línea, en una experiencia o en Roblox Studio.</li>
+      <li>Nombre público de la experiencia cuando Roblox devuelve un identificador y esa experiencia es visible.</li>
+      <li>Descripción pública del perfil, junto con la fecha aproximada de cada comprobación y los cambios detectados.</li>
+      <li>IDs y datos básicos de los nuevos emblemas visibles detectados, junto con la fecha de obtención cuando Roblox y la privacidad del perfil permitan consultarla.</li>
+      <li>URL pública de la miniatura del avatar, URL de imágenes 2D de cuerpo completo que se detecten al registrar un cambio o se soliciten al abrir el visor y una firma local de sus activos, colores y escalas para detectar cambios de avatar.</li>
+      <li>Lista pública de amigos del usuario seguido: cantidad, User IDs, usernames y Display Names disponibles, además de altas y bajas detectadas entre consultas.</li>
+      <li>Conteos y listas visibles de seguidores y perfiles seguidos: User IDs, usernames y Display Names disponibles, además de apariciones y desapariciones detectadas entre consultas.</li>
+      <li>Fecha y hora aproximada de cada cambio de estado y de la última consulta.</li>
+      <li>Preferencias de consentimiento, activación y perfiles seleccionados.</li>
+      <li>Un identificador aleatorio de instalación, guardado en el almacenamiento local y una copia de sincronización de Chrome para mantener la prueba asociada a la instalación.</li>
+      <li>Cuando el usuario activa una licencia: la clave introducida, el identificador de instancia y el estado de licencia necesarios para recordar la activación en ese dispositivo.</li>
+    </ul>
+
+    <h2>Cómo se utilizan</h2>
+    <p>Los datos se utilizan únicamente para registrar cambios públicos de los perfiles seleccionados, mostrar sus historiales, comparar dos historiales locales y generar alertas de discrepancias dentro de la extensión. Estas alertas se calculan localmente cuando un cambio de avatar, emblema o amistad coincide con una presencia registrada como desconectada o no visible; son señales orientativas, no una prueba de conexión ni una afirmación sobre el estado real del perfil.</p>
+    <p>Cada categoría tiene un intervalo independiente configurable entre 30 segundos y 24 horas: presencia (30 s por defecto), amigos (1:15 min), seguidores/seguidos (3:35 min), avatares (1:10 min), descripción (10:05 min) y emblemas (8:55 min). Los intervalos se desplazan para repartir las peticiones. El usuario puede elegir si las fechas se muestran en 12 horas (AM/PM) o en 24 horas; la interfaz indica la zona local detectada y su desfase UTC. Las alarmas del navegador pueden retrasarse.</p>
+    <p>Las notificaciones de Chrome están desactivadas por defecto. Si el usuario las activa, elige los perfiles y las categorías desde Ajustes, la extensión crea avisos del sistema únicamente cuando detecta cambios nuevos. No se envían datos a un servidor propio; el texto del aviso se entrega al servicio de notificaciones de Chrome y al sistema operativo para mostrarlo.</p>
+    <p>El historial conserva 90 días por defecto y permite elegir 30, 60, 90 días o permanente. Al cambiarlo, solo se eliminan eventos cuya fecha supera ese límite; no se restablecen los perfiles ni sus capturas actuales. Se solicita el permiso <code>unlimitedStorage</code> para evitar la cuota estándar de 10 MB de <code>chrome.storage.local</code>; la extensión muestra el uso actual y el espacio real sigue dependiendo del dispositivo.</p>
+    <p>El historial solo añade una entrada cuando cambia la categoría de presencia o cuando el usuario pasa a otra experiencia. Las consultas que devuelven el mismo estado en la misma experiencia no generan entradas repetidas.</p>
+    <p>El historial del avatar añade una entrada cuando cambia la URL de la miniatura o la firma de los activos, colores o escalas. La hora registrada es la primera comprobación en la que la extensión observa el cambio y puede no coincidir exactamente con el momento en que el perfil modificó su avatar.</p>
+    <p>La descripción pública se comprueba aproximadamente cada 10:05 minutos y se guarda una captura inicial y otra entrada solo cuando el texto cambia. Si está vacía, se registra como “Sin descripción pública”. Los errores temporales no sustituyen la última descripción válida.</p>
+    <p>Solo se consultan los 10 emblemas más recientes aproximadamente cada 8:55 minutos. La primera consulta establece una línea base sin crear entradas; después, solo se registran los IDs que no estaban en la línea base. Si Roblox bloquea la lista de emblemas de experiencias por falta de sesión o privacidad, se consulta el listado público de emblemas de Roblox. La fecha de obtención se solicita únicamente para emblemas nuevos cuando ese dato está disponible; si Roblox no la devuelve, se conserva la hora en que la extensión detectó el emblema.</p>
+    <p>La lista pública de amigos se compara aproximadamente cada 1:15 minutos. La primera consulta solo establece una línea base; después, el historial registra únicamente los IDs que aparecen o desaparecen y la cantidad total observada. Si Roblox no devuelve la lista, se conserva la última captura válida y se muestra el error.</p>
+    <p>Los conteos de seguidores y seguidos se revisan aproximadamente cada 3:35 minutos. Las listas se consultan al crear la línea base, cuando cambia un conteo o durante una revisión completa periódica. Cada lista se limita a 1.000 perfiles para controlar peticiones y almacenamiento; si se supera el límite, la captura se marca como parcial. Un conteo sin cambios no garantiza que no haya ocurrido un intercambio simultáneo entre dos consultas.</p>
+    <p>El modo Comparar procesa únicamente los datos que ya están guardados localmente para los dos perfiles elegidos y no realiza solicitudes adicionales a Roblox.</p>
+
+    <h2>Almacenamiento y transferencias</h2>
+    <p>El historial y las capturas de perfiles se guardan solo en el almacenamiento local de Chrome en el dispositivo del usuario. RBX Overwatch no envía ese historial a su servidor, no vende los datos y no los utiliza para publicidad personalizada.</p>
+    <p>Para controlar la prueba y las licencias, la extensión envía al Worker de Cloudflare de RBX Overwatch un identificador aleatorio de instalación y, únicamente al activar o validar una licencia, la clave introducida por el usuario. El Worker no guarda la clave en texto plano: conserva un hash, el identificador de instancia de Lemon Squeezy y el estado de acceso. No se envían al Worker los perfiles de Roblox, sus amigos, sus avatares ni el historial local.</p>
+    <p>Para resolver nombres, consultar presencia, emblemas, comparar avatares, obtener relaciones sociales y resolver el nombre público de una experiencia, la extensión realiza solicitudes HTTPS directamente a los servicios oficiales de Roblox. Los conteos de seguidores y seguidos pueden ser públicos, pero Roblox puede exigir una sesión activa para entregar las listas con identidades. Cuando hay una sesión activa, el navegador adjunta automáticamente sus credenciales a esas solicitudes autorizadas; la extensión no lee ni guarda cookies, contraseñas o tokens de sesión.</p>
+    <p>La consulta autenticada puede mostrar la presencia de perfiles que sean amigos del usuario, siempre que Roblox y las opciones de privacidad de ese perfil lo permitan. Si Roblox no autoriza la consulta, la extensión no intenta saltarse esa restricción y puede mostrar “Desconectado o no visible”.</p>
+
+    <h2>Uso limitado y finalidad única</h2>
+    <p>RBX Overwatch cumple con los requisitos de Uso limitado de Chrome Web Store. Los datos se usan solo para la finalidad única descrita: registrar y presentar cambios públicos de perfiles de Roblox seleccionados por el usuario. No se venden, no se usan para publicidad personalizada, no se emplean para crear perfiles comerciales y no se ponen a disposición de personas ajenas al usuario. El Worker propio se limita a la prueba y las licencias; no recibe el historial local ni ofrece acceso humano a él.</p>
+    <p>La extensión solicita únicamente los datos y permisos necesarios para mostrar esa función. Si cambia alguna práctica de datos en una versión futura, se informará de forma visible antes de aplicar el cambio.</p>
+
+    <h2>Consentimiento y controles</h2>
+    <p>El registro permanece desactivado hasta que el usuario acepta el aviso visible dentro de la extensión. Al aceptar, se inicia una prueba de 24 horas controlada por el servidor. El usuario agrega manualmente los perfiles, puede pausar el registro, quitar perfiles seleccionados y borrar todo el historial desde el panel. Las notificaciones de Chrome también permanecen desactivadas hasta que el usuario las activa y elige perfiles y categorías.</p>
+
+    <h2>Contacto</h2>
+    <p>Para preguntas sobre esta política o sobre la extensión, contacta al creador, Jagu, mediante su <a href="https://www.roblox.com/users/4481541702/profile" target="_blank" rel="noopener noreferrer">perfil de Roblox</a>.</p>
+  </main>
+</body>
+</html>
