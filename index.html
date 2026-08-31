@@ -54,7 +54,7 @@
   <main>
     <p class="eyebrow">RBX Overwatch</p>
     <h1>Política de privacidad</h1>
-    <p class="meta">Última actualización: 29 de agosto de 2026</p>
+    <p class="meta">Última actualización: 31 de agosto de 2026</p>
 
     <div class="notice">Esta política explica qué datos maneja RBX Overwatch, para qué los utiliza y qué controles tiene el usuario.</div>
 
@@ -74,7 +74,8 @@
       <li>Conteos y listas visibles de seguidores y perfiles seguidos: User IDs, usernames y Display Names disponibles, además de apariciones y desapariciones detectadas entre consultas.</li>
       <li>Fecha y hora aproximada de cada cambio de estado y de la última consulta.</li>
       <li>Preferencias de consentimiento, activación y perfiles seleccionados.</li>
-      <li>Un identificador aleatorio de instalación, guardado en el almacenamiento local y una copia de sincronización de Chrome para mantener la prueba asociada a la instalación.</li>
+      <li>Un identificador aleatorio de instalación, guardado en el almacenamiento local y una copia de sincronización de Chrome, usado únicamente como protección secundaria contra abuso. No es una huella digital del dispositivo.</li>
+      <li>El identificador numérico de la cuenta Roblox autenticada (userId) y las fechas de inicio y vencimiento de su prueba. El userId se obtiene de la sesión activa mediante el endpoint oficial de Roblox; no se lee ni se envía la cookie <code>.ROBLOSECURITY</code>, contraseñas ni tokens.</li>
       <li>Cuando el usuario activa una licencia: la clave introducida, el identificador de instancia y el estado de licencia necesarios para recordar la activación en ese dispositivo.</li>
     </ul>
 
@@ -93,7 +94,8 @@
 
     <h2>Almacenamiento y transferencias</h2>
     <p>El historial y las capturas de perfiles se guardan solo en el almacenamiento local de Chrome en el dispositivo del usuario. RBX Overwatch no envía ese historial a su servidor, no vende los datos y no los utiliza para publicidad personalizada.</p>
-    <p>Para controlar la prueba y las licencias, la extensión envía al Worker de Cloudflare de RBX Overwatch un identificador aleatorio de instalación y, únicamente al activar o validar una licencia, la clave introducida por el usuario. El Worker no guarda la clave en texto plano: conserva un hash, el identificador de instancia de Lemon Squeezy y el estado de acceso. No se envían al Worker los perfiles de Roblox, sus amigos, sus avatares ni el historial local.</p>
+    <p>Para controlar la prueba y las licencias, la extensión envía al Worker de Cloudflare de RBX Overwatch únicamente el userId numérico de la cuenta Roblox autenticada y el identificador aleatorio de instalación. El Worker guarda en D1 una prueba de 24 horas por cuenta (fecha de inicio y vencimiento); al reinstalar, la misma cuenta conserva su vencimiento y al cambiar de cuenta se evalúa una prueba independiente. El installId solo se conserva como protección secundaria contra abuso y no se usa como clave principal ni como fingerprinting. La extensión no solicita OAuth ni pasos adicionales.</p>
+    <p>El Worker no recibe ni guarda la cookie <code>.ROBLOSECURITY</code>, contraseñas, tokens de sesión, perfiles seguidos ni el historial local. Únicamente al activar o validar una licencia se envían al Worker la clave introducida y el identificador de instancia necesarios para Lemon Squeezy; la clave no se guarda en texto plano: se conserva un hash, junto con el estado de licencia. No se envían al Worker los perfiles de Roblox, sus amigos, sus avatares ni el historial local.</p>
     <p>Para resolver nombres, consultar presencia, emblemas, comparar avatares, obtener relaciones sociales y resolver el nombre público de una experiencia, la extensión realiza solicitudes HTTPS directamente a los servicios oficiales de Roblox. Los conteos de seguidores y seguidos pueden ser públicos, pero Roblox puede exigir una sesión activa para entregar las listas con identidades. Cuando hay una sesión activa, el navegador adjunta automáticamente sus credenciales a esas solicitudes autorizadas; la extensión no lee ni guarda cookies, contraseñas o tokens de sesión.</p>
     <p>La consulta autenticada puede mostrar la presencia de perfiles que sean amigos del usuario, siempre que Roblox y las opciones de privacidad de ese perfil lo permitan. Si Roblox no autoriza la consulta, la extensión no intenta saltarse esa restricción y puede mostrar “Desconectado o no visible”.</p>
 
